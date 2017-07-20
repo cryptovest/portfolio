@@ -24,7 +24,6 @@ head(trade_history)
 add_trade <- function(type, deposit_amount = 0, deposit_currency = NA,
                       withdraw_amount = 0, withdraw_currency = NA, exchange_name = NA,
                       remark = NA, date = NA) {
-  # sell_val = - sell_val # `sell_val` is substracted from portfolio
   new_trade <- data.frame(type, deposit_amount, deposit_currency,
                           withdraw_amount, withdraw_currency, exchange_name, remark, date)
   read.csv(file = "trade_history.csv", header = TRUE, sep = ",") %>%
